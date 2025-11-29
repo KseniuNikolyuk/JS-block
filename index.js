@@ -116,7 +116,7 @@ if (monthNumber >= 1 && monthNumber <= 12){
         case 11:
             console.log('Осень')
             break
-        default:git add .
+        default:
             console.log("Неверный номер месяца");
     }
 }
