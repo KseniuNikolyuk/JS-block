@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерьер</title>
+    <link rel="stylesheet" href="scss/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero__content">
+            <h1 class="hero__title">Добро пожаловать на мой сайт мини-игр</h1>
+            <p class="hero__description">Тебе предстоит пройти несколько увлекательных игр. Если готов, нажимай «Поехали!» и приступай.</p>
+            <a href="#scroll" class="hero__button">Поехали!</a>
+        </div>
+    </header>
+
+<!-- бегущая строка -->
+<div class="marquee-section">
+    <div class="marquee-container">
+        <div class="marquee-track">
+            <span class="marquee-item">ВИКТОРИНА</span>
+            <img src="img/strip_star.svg" alt="★" class="marquee-icon">
+            <span class="marquee-item">УГАДАЙ ЧИСЛО</span>
+            <img src="img/strip_star.svg" alt="★" class="marquee-icon">
+            <span class="marquee-item">ПЕРЕВЕРНИ ТЕКСТ</span>
+            <img src="img/strip_star.svg" alt="★" class="marquee-icon">
+            <span class="marquee-item">ПРОСТАЯ АРИФМЕТИКА</span>
+            <img src="img/strip_star.svg" alt="★" class="marquee-icon">
+            <span class="marquee-item">КАМЕНЬ, НОЖНИЦЫ, БУМАГА</span>
+            <img src="img/strip_star.svg" alt="★" class="marquee-icon">
+            <span class="marquee-item">ГЕНЕРАТОР СЛУЧАЙНЫХ ЦВЕТОВ</span>
+            <img src="img/strip_star.svg" alt="★" class="marquee-icon">
+        </div>
+    </div>
+</div>
+
+    <section class="about" id="scroll">
+        <h1 class="about__title">Об играх</h1>
+        <p class="about__description">В моей коллекции представлено 6 игр на разные темы.Игры несложные — в них может поиграть каждый.
+Все игры доступны для пользования.</p>
+
+    <div class="games">
+        <div class="games__column">
+            <article class="games-card box-white">
+                <a href="#">
+                    <img src="img/game_one.png" alt="игра №1:'Угадай число'">
+                    <div class="super">
+                        <h3 class="super__title ">Игра № 1</h3>
+                        <h2 class="super__description">Угадай число</h2>
+                    </div>
+                </a>
+            </article>
+
+            <article class="games-card box-white">
+                <a href="#">
+                    <img src="img/game_four.png" alt="игра №4:'Камень, ножницы, бумага'">
+                    <div class="super">
+                        <h3 class="super__title">Игра № 4</h3>
+                        <h2 class="super__description">
+                            Камень,<br>
+                            ножницы,<br>
+                            бумага
+                        </h2>                    
+                    </div>
+                </a>
+            </article>
+        </div>
+
+        <div class="games__column">
+            <article class="games-card box-white">
+                <a href="#">
+                    <img src="img/game_two.png" alt="игра №2:'Простая арифметика'">
+                    <div class="super">
+                        <h3 class="super__title">Игра № 2</h3>
+                        <h2 class="super__description">Простая арифметика</h2>
+                    </div>
+                </a>
+            </article>
+            <article class="games-card box-white">
+                <a href="#">
+                    <img src="img/game_five.png" alt="игра №5:'Простая викторина'">
+                    <div class="super">
+                        <h3 class="super__title">Игра № 5</h3>
+                        <h2 class="super__description">Простая викторина</h2>
+                    </div>
+                </a>
+            </article>
+        </div>
+
+        <div class="games__column">
+            <article class="games-card box-white">
+                <a href="#">
+                    <img src="img/game_three.png" alt="игра №3:'Переверни текст'">
+                    <div class="super">
+                        <h3 class="super__title">Игра № 3</h3>
+                        <h2 class="super__description">Переверни текст</h2>
+                    </div>
+                </a>
+            </article>
+            <article class="games-card box-white">
+                <a href="#">
+                    <img src="img/game_six.png" alt="игра №6:'Генератор случайных цвето'">
+                    <div class="super">
+                        <h3 class="super__title">Игра № 6</h3>
+                        <h2 class="super__description">Генератор случайных цветов</h2>
+                    </div>
+                </a>
+            </article>
+        </div>
+    </div>
+</section>
+
