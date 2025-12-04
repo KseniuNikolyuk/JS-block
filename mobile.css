@@ -1,8 +1,3 @@
-@media (min-width: 769px) and (max-width: 1023px) {
-  .about-games-section {
-    display: none;
-  }
-}
 @media (max-width: 768px) {
   .boards {
     padding-left: 16px;
@@ -62,11 +57,90 @@
   .about-games-section {
     display: none;
   }
-  .games-title {
-    font-size: 36px;
-    text-align: center;
-    padding-top: 0;
-    color: white;
-    background: transparent;
+  .mini-game-title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 48px;
+  }
+  .mini-games {
+    display: none;
+    border-radius: 30px;
+    transition: none;
+  }
+  .mini-games__card {
+    background-color: white;
+    width: 378px;
+    border-radius: 30px;
+    padding-bottom: 36px;
+  }
+  .mini-games__star {
+    display: none;
+  }
+  .mini-games-mob-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+  }
+  .games-section {
+    padding: 48px 0 10px 0;
+  }
+  .card-game__name {
+    font-size: 32px;
+  }
+  .card-game__desc {
+    font-size: 16px;
+  }
+  .footer__text {
+    font-size: 16px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1023px) {
+  .about-games-section {
+    display: none;
+  }
+  .mini-game-title {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 48px;
+  }
+  .mini-games {
+    display: none;
+    border-radius: 30px;
+    transition: none;
+  }
+  .mini-games__card {
+    background-color: white;
+    width: 378px;
+    border-radius: 30px;
+    padding-bottom: 36px;
+  }
+  .mini-games-mob-1 {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .games-section {
+    padding: 48px 0 20px 0;
+  }
+  .card-game__name {
+    font-size: 48px;
+  }
+  .card-game__desc {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1024px) {
+  .mini-games-mob {
+    display: none;
   }
 }/*# sourceMappingURL=mobile.css.map */
