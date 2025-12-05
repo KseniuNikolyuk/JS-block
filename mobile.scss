@@ -88,7 +88,6 @@
         
         &__card {
             background-color: white;
-            width: 378px;
             border-radius: 30px;
             padding-bottom: 36px;
         }
@@ -166,6 +165,7 @@
     }
     
     .card-game {
+        width: 378px;
         &__name {
             font-size: 48px;
         }

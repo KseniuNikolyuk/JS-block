@@ -72,7 +72,6 @@
   }
   .mini-games__card {
     background-color: white;
-    width: 378px;
     border-radius: 30px;
     padding-bottom: 36px;
   }
@@ -131,6 +130,9 @@
   }
   .games-section {
     padding: 48px 0 20px 0;
+  }
+  .card-game {
+    width: 378px;
   }
   .card-game__name {
     font-size: 48px;

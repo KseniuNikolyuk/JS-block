@@ -15,10 +15,14 @@ body {
 }
 
 .header-section {
+  position: relative; 
     height: 800px;
     background: rgba(225, 255, 143, 1);
 }
-
+.header {
+  position: relative; /* Добавьте это */
+    z-index: 2; 
+}
 .header-star {
   position: absolute;
 }
@@ -26,6 +30,7 @@ body {
 .header-star--1 {
   top: 94px;
   left: 63px;
+  z-index: 1;
 }
 
 .header-star--2 {
@@ -59,6 +64,7 @@ body {
     line-height: 78px;
     text-align: left;
     padding-top: 196px;
+    z-index: 1;
 }
 
 .header__text {
@@ -167,11 +173,11 @@ body {
 }
 
 .big-cards {
-    width: 378px;
+  height: 512px;
 }
 
 .little-cards {
-    width: 378px;
+  height: 473px;
 }
 
 .games-cards {
@@ -180,10 +186,15 @@ body {
 
 .card-game {
   background-color: white;
-  width: 378px;
   border-radius: 30px;
   padding-bottom: 36px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  max-width: 375px;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  padding: 0px;
 }
 
 .card-game:hover{
@@ -193,6 +204,7 @@ body {
 
 .card-game__img {
   border-radius: 30px;
+  width: 100%;
 }
 
 .card-game__content {
