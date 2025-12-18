@@ -123,62 +123,162 @@
 
 
 
-// Работа с кодом 3 дз
+// // Работа с кодом 3 дз
 
-// Задание 1 
-let kol = 1
+// // Задание 1 
+// let kol = 1
 
-while (kol < 3) {
-    alert("Привет!");
-    kol++
+// while (kol < 3) {
+//     alert("Привет!");
+//     kol++
+// }
+
+// // Задание 2 
+// let i = 1;
+
+// while (i < 6) {
+//     console.log(i)
+//     i++;
+// }
+
+// // // Задание 3 
+// let p = 7;
+
+// do {
+//     console.log(p)
+//     p++;
+// } while (p<23)
+
+
+// // Задание 4
+
+// const obj = {
+//     "Коля" : '200',
+//     "Вася" : '300',
+//     "Петя" : '400'
+// }
+
+// for (let key in obj) {
+//     console.log (`${key} — зарплата ${obj[key]} долларов.`)
+// }
+
+// // Задание 5
+
+// let n = 1000
+// let num = 0
+
+// while (n>50) {
+//     n = n/2
+//     console.log (n)
+//     num++
+// }
+
+// console.log(`Итоговое число: ${n}`)
+// console.log(`Итераций: ${num}`)
+
+// // Задание 6
+// let firstFriday = 6;
+
+// for (let day = firstFriday; day <= 31; day += 7) {
+//     console.log(`Сегодня пятница, ${day}-е число. Необходимо подготовить отчет.`);
+// }
+
+
+
+// Работа с кодом 4 дз
+// Задание 1
+
+function minNumber(a, b) {
+    if (a < b) {
+        console.log (a);
+    } else {
+        console.log (b);
+    }
 }
 
-// Задание 2 
-let i = 1;
+minNumber(8, 4)
 
-while (i < 6) {
-    console.log(i)
-    i++;
+// Задание 2
+
+function count(c) {
+    if (c % 2 === 0) {
+        console.log ('Число четное');
+    } else {
+        console.log ('Число нечетное');
+    }
 }
 
-// // Задание 3 
-let p = 7;
+count (5)
 
-do {
-    console.log(p)
-    p++;
-} while (p<23)
+// Задание 3
 
+function printSquare(num) {
+    console.log(num * num);
+}
+
+printSquare (3)
 
 // Задание 4
 
-const obj = {
-    "Коля" : '200',
-    "Вася" : '300',
-    "Петя" : '400'
-}
-
-for (let key in obj) {
-    console.log (`${key} — зарплата ${obj[key]} долларов.`)
+function checkAge() {
+    let age = prompt("Сколько вам лет?");
+    if (age === null) {
+        return; 
+    } age = Number(age);
+    if (isNaN(age) || age < 0) {
+        alert('Вы ввели неправильное значение');
+    } else if (age >= 0 && age <= 12) {
+        alert('Привет, друг!');
+    } else if (age >= 13) {
+        alert('Добро пожаловать!');
+    }
 }
 
 // Задание 5
 
-let n = 1000
-let num = 0
-
-while (n>50) {
-    n = n/2
-    console.log (n)
-    num++
+function multiplyNumbers(a, b) {
+    const num1 = Number(a);
+    const num2 = Number(b);
+    if (isNaN(num1) || isNaN(num2)) {
+        return 'Одно или оба значения не являются числом';
+    }
+    return num1 * num2;
 }
-
-console.log(`Итоговое число: ${n}`)
-console.log(`Итераций: ${num}`)
 
 // Задание 6
-let firstFriday = 6;
 
-for (let day = firstFriday; day <= 31; day += 7) {
-    console.log(`Сегодня пятница, ${day}-е число. Необходимо подготовить отчет.`);
+function cubeNumber() {
+    let input = prompt("Введите число:");
+    let num = Number(input);
+    if (isNaN(num)) {
+        return 'Переданный параметр не является числом';
+    }
+    let cube = num * num * num;
+    return `${num} в кубе равняется ${cube}`;
 }
+
+// Задание 7 
+
+const circle1 = {
+    radius: 5,
+    
+    getArea: function() {
+        return Math.PI * this.radius * this.radius;
+    },
+    
+    getPerimeter: function() {
+        return 2 * Math.PI * this.radius;
+    }
+};
+
+const circle2 = {
+    radius: 10,
+    
+    getArea: function() {
+        return Math.PI * Math.pow(this.radius, 2);
+    },
+    
+    getPerimeter: function() {
+        return 2 * Math.PI * this.radius;
+    }
+};

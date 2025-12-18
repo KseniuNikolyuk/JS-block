@@ -20,8 +20,8 @@ body {
     background: rgba(225, 255, 143, 1);
 }
 .header {
-  position: relative; /* Добавьте это */
-    z-index: 2; 
+  position: relative;
+  z-index: 2; 
 }
 .header-star {
   position: absolute;
@@ -359,6 +359,13 @@ body {
   line-height: 141.69%;
   letter-spacing: 0%;
   text-align: center;
+  transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.mini-games__button:hover{
+    background-color: white;
+    color: black;
+    transform: translateY(-2px);
 }
 
 .footer {
