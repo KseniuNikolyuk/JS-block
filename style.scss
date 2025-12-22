@@ -21,16 +21,16 @@ body {
 }
 .header {
   position: relative;
-  z-index: 2; 
+  z-index: 10; /* Увеличиваем для контента */
 }
 .header-star {
   position: absolute;
+  z-index: 1; /* Все звезды на заднем плане */
 }
 
 .header-star--1 {
   top: 94px;
   left: 63px;
-  z-index: 1;
 }
 
 .header-star--2 {
@@ -64,7 +64,8 @@ body {
     line-height: 78px;
     text-align: left;
     padding-top: 196px;
-    z-index: 1;
+    position: relative;
+    z-index: 5;
 }
 
 .header__text {
@@ -74,6 +75,8 @@ body {
     letter-spacing: 0px;
     text-align: left;
     margin-top: 24px;
+    position: relative;
+    z-index: 5;
 }
 
 .header__button {
@@ -93,6 +96,8 @@ body {
     display: inline-flex; 
     align-items: center;
     justify-content: center;
+    position: relative;
+    z-index: 5;
 }
 
 .header__button:hover{
@@ -115,6 +120,8 @@ body {
     line-height: 78px;
     letter-spacing: 0px;
     text-align: left;
+    position: relative;
+    z-index: 5;
 }
 
 .about-games__text {
@@ -125,17 +132,18 @@ body {
     letter-spacing: 0px;
     text-align: left;
     padding-top: 24px;
+    position: relative;
+    z-index: 5;
 }
 
 .about-games-section__star {
   position: absolute;
-  z-index: 20;
+  z-index: 1; /* Звезды на заднем плане */
 }
 
 .about-games-section__star--1 {
   margin-top: 77px;
   right: 0;
-  z-index: 0;
 }
 
 .about-games-section__star--2 {
@@ -152,24 +160,27 @@ body {
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    z-index: 1;
+    flex-direction: row;
+    z-index: 5; /* Контент поверх звезд */
 }
 
 .games-block-1 {
   margin-top: 72px;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
   gap: 32px;
   align-items: flex-start;
+  position: relative;
+  z-index: 5;
 }
 
 .games-block-2 {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
   gap: 32px;
   align-items: flex-end;
+  position: relative;
+  z-index: 5;
 }
 
 .big-cards {
@@ -195,6 +206,8 @@ body {
   justify-content: flex-start; 
   align-items: flex-start; 
   padding: 0px;
+  position: relative;
+  z-index: 5;
 }
 
 .card-game:hover{
@@ -246,9 +259,11 @@ body {
 .mini-games {
   border-radius: 30px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 5;
   
   &__star {
     position: absolute;
+    z-index: 1; /* Звезды на заднем плане */
   }
 
   &__star--1 {
@@ -287,6 +302,8 @@ body {
     align-items: flex-start;
     padding: 0px;
     margin-bottom: 32px;
+    position: relative;
+    z-index: 5;
   }
 
   &__content {
@@ -325,6 +342,8 @@ body {
     letter-spacing: 0px;
     text-align: left;
     margin-bottom: 72px;
+    position: relative;
+    z-index: 5;
 }
 
 .mini-games-mob__1 {

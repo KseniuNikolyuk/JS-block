@@ -219,7 +219,7 @@ function printSquare(num) {
 printSquare (3)
 
 // Задание 4
-
+ 
 function checkAge() {
     let age = prompt("Сколько вам лет?");
     if (age === null) {
