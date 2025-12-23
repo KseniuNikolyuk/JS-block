@@ -5,7 +5,6 @@
 }
 
 .center {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 0 120px;
 }
@@ -52,6 +51,7 @@ html, body {
   display: none;
 }
 
+/* стартовый блок */
 .hero {
   background-color: rgb(225, 255, 143);
   width: 100%;
@@ -102,6 +102,7 @@ html, body {
   border: 1px solid rgb(0, 0, 0);
 }
 
+/* блок "Об играх" */
 .about {
   background: rgb(32, 32, 39);
   position: relative;
@@ -129,6 +130,7 @@ html, body {
   padding-top: 24px;
 }
 
+/* карточки игр */
 .games {
   display: flex;
   flex-direction: row;
@@ -140,6 +142,11 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 32px;
+}
+
+/* ИСПРАВЛЕНО: обновлен селектор для нового блока about-games-section */
+.about-games-section {
+  position: relative;
 }
 
 .about-games-section__star {
@@ -282,11 +289,13 @@ a:hover, a:active, a:visited {
     display: none;
   }
   .hero__description-mobile {
+    display: block;
     font-size: 16px;
     text-align: center;
     font-weight: 400;
     line-height: 20px;
     letter-spacing: 0px;
+    font-family: Montserrat;
   }
   .hero__button {
     font-size: 16px;
@@ -350,11 +359,11 @@ a:hover, a:active, a:visited {
 }
 
 .mini__container {
-  max-width: 1400px; /* Ограничиваем ширину контейнера */
-  margin: 0 auto; /* Центрируем контейнер */
+  max-width: 1400px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 32px; /* Добавляем промежуток между карточками */
+  gap: 32px;
 }
 
 .mini__title {
@@ -401,13 +410,12 @@ a:hover, a:active, a:visited {
   border-radius: 30px;
   box-shadow: 0px 20px 67px -12px rgba(0, 0, 0, 0.13);
   background: #FFFFFF;
-  overflow: hidden; /* Чтобы содержимое не выходило за границы */
+  overflow: hidden;
   min-height: 350px;
 }
 
-/* расположение картинки и текста */
 .mini__card:nth-child(odd) {
-  flex-direction: row; /* Текст слева, картинка справа */
+  flex-direction: row;
 }
 
 .mini__content {
@@ -415,8 +423,8 @@ a:hover, a:active, a:visited {
   flex-direction: column;
   gap: 24px;
   padding: 48px;
-  flex: 1; /* Занимает доступное пространство */
-  justify-content: center; /* Центрируем содержимое по вертикали */
+  flex: 1;
+  justify-content: center;
 }
 
 .mini__name {
@@ -438,15 +446,14 @@ a:hover, a:active, a:visited {
 }
 
 .mini__img {
-  width: 50%; /* Картинка занимает 50% ширины */
+  width: 50%;
   -o-object-fit: cover;
-     object-fit: cover; /* Чтобы картинка заполняла область */
-  border-radius: 0 30px 30px 0; /* Закругляем только правую сторону */
+     object-fit: cover;
+  border-radius: 0 30px 30px 0;
 }
 
-/* Для карточек с картинкой слева */
 .mini__card:nth-child(even) .mini__img {
-  border-radius: 30px 0 0 30px; /* Закругляем левую сторону */
+  border-radius: 30px 0 0 30px;
 }
 
 .mini__button {
@@ -485,4 +492,104 @@ a:hover, a:active, a:visited {
   font-family: Montserrat;
   line-height: 29px;
   margin: 0;
+}
+
+.mobile-games {
+  display: none;
+}
+
+/* мобильная версия мини-игр */
+@media (max-width: 768px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .mobile-games__title {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+  .mini__title {
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+  .mini {
+    display: none;
+  }
+  .mobile-games {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(32, 32, 39);
+    gap: 24px;
+    padding-top: 46px;
+    padding-bottom: 10px;
+  }
+  .mobile-games .games-card {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .mobile-games .super {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-games .super__description {
+    text-align: left;
+    justify-content: flex-start;
+    width: 100%;
+    display: flex;
+    margin-bottom: 16px;
+  }
+  /* ИСПРАВЛЕНО: обновлен селектор для super__desc */
+  .mobile-games .super__desc {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+  /* ИСПРАВЛЕНО: обновлен селектор для super__button */
+  .mobile-games .super__button {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    font-size: 16px;
+    padding: 12px 24px;
+    background: rgb(32, 32, 39);
+    color: white;
+    border-radius: 60px;
+    border: none;
+    cursor: pointer;
+    font-family: Montserrat;
+    font-weight: 600;
+  }
+  .about {
+    display: none;
+  }
+  .footer__text {
+    color: rgb(0, 0, 0);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */
