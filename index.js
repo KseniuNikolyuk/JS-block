@@ -185,100 +185,261 @@
 
 
 
-// Работа с кодом 4 дз
-// Задание 1
+// // Работа с кодом 4 дз
+// // Задание 1
 
-function minNumber(a, b) {
-    if (a < b) {
-        console.log (a);
-    } else {
-        console.log (b);
+// function minNumber(a, b) {
+//     if (a < b) {
+//         console.log (a);
+//     } else {
+//         console.log (b);
+//     }
+// }
+
+// minNumber(8, 4)
+
+// // Задание 2
+
+// function count(c) {
+//     if (c % 2 === 0) {
+//         console.log ('Число четное');
+//     } else {
+//         console.log ('Число нечетное');
+//     }
+// }
+
+// count (5)
+
+// // Задание 3
+
+// function printSquare(num) {
+//     console.log(num * num);
+// }
+
+// printSquare (3)
+
+// // Задание 4
+ 
+// function checkAge() {
+//     let age = prompt("Сколько вам лет?");
+//     if (age === null) {
+//         return; 
+//     } age = Number(age);
+//     if (isNaN(age) || age < 0) {
+//         alert('Вы ввели неправильное значение');
+//     } else if (age >= 0 && age <= 12) {
+//         alert('Привет, друг!');
+//     } else if (age >= 13) {
+//         alert('Добро пожаловать!');
+//     }
+// }
+
+// // Задание 5
+
+// function multiplyNumbers(a, b) {
+//     const num1 = Number(a);
+//     const num2 = Number(b);
+//     if (isNaN(num1) || isNaN(num2)) {
+//         return 'Одно или оба значения не являются числом';
+//     }
+//     return num1 * num2;
+// }
+
+// // Задание 6
+
+// function cubeNumber() {
+//     let input = prompt("Введите число:");
+//     let num = Number(input);
+//     if (isNaN(num)) {
+//         return 'Переданный параметр не является числом';
+//     }
+//     let cube = num * num * num;
+//     return `${num} в кубе равняется ${cube}`;
+// }
+
+// // Задание 7 
+
+// const circle1 = {
+//     radius: 5,
+    
+//     getArea: function() {
+//         return Math.PI * this.radius * this.radius;
+//     },
+    
+//     getPerimeter: function() {
+//         return 2 * Math.PI * this.radius;
+//     }
+// };
+
+// const circle2 = {
+//     radius: 10,
+    
+//     getArea: function() {
+//         return Math.PI * Math.pow(this.radius, 2);
+//     },
+    
+//     getPerimeter: function() {
+//         return 2 * Math.PI * this.radius;
+//     }
+// };
+
+// Работа с кодом дз 5
+
+// Задание 1 
+const numbers1 = [1, 5, 4, 10, 0, 3];
+
+for (let i = 0; i < numbers1.length; i++) {
+    console.log(numbers1[i]);
+    if (numbers1[i] === 10) {
+        break;
     }
 }
-
-minNumber(8, 4)
 
 // Задание 2
-
-function count(c) {
-    if (c % 2 === 0) {
-        console.log ('Число четное');
-    } else {
-        console.log ('Число нечетное');
-    }
-}
-
-count (5)
+const numbers2 = [1, 5, 4, 10, 0, 3];
+const indexOfFour = numbers2.indexOf(4);
+console.log(`Индекс значения 4: ${indexOfFour}`);
 
 // Задание 3
-
-function printSquare(num) {
-    console.log(num * num);
-}
-
-printSquare (3)
+const numbers3 = [1, 3, 5, 10, 20];
+console.log(`Элементы через пробел: ${numbers3.join(' ')}`);
 
 // Задание 4
- 
-function checkAge() {
-    let age = prompt("Сколько вам лет?");
-    if (age === null) {
-        return; 
-    } age = Number(age);
-    if (isNaN(age) || age < 0) {
-        alert('Вы ввели неправильное значение');
-    } else if (age >= 0 && age <= 12) {
-        alert('Привет, друг!');
-    } else if (age >= 13) {
-        alert('Добро пожаловать!');
+const array4 = [];
+for (let i = 0; i < 3; i++) {
+    const innerArray = [];
+    for (let j = 0; j < 3; j++) {
+        innerArray.push(1);
     }
+    array4.push(innerArray);
 }
+console.log("Многомерный массив:", array4);
 
 // Задание 5
-
-function multiplyNumbers(a, b) {
-    const num1 = Number(a);
-    const num2 = Number(b);
-    if (isNaN(num1) || isNaN(num2)) {
-        return 'Одно или оба значения не являются числом';
-    }
-    return num1 * num2;
-}
+const array5 = [1, 1, 1];
+console.log("Исходный массив:", array5);
+array5.push(2, 2, 2);
+console.log("Массив после добавления:", array5);
 
 // Задание 6
+let arr6 = [9, 8, 7, 'a', 6, 5];
+console.log("Исходный массив:", arr6);
+arr6.sort();
+console.log("После sort():", arr6);
+const indexOfA = arr6.indexOf('a');
+if (indexOfA !== -1) {
+    arr6.splice(indexOfA, 1);
+}
+console.log("После удаления 'a':", arr6);
 
-function cubeNumber() {
-    let input = prompt("Введите число:");
-    let num = Number(input);
-    if (isNaN(num)) {
-        return 'Переданный параметр не является числом';
+// Задание 7
+const nums = [9, 8, 7, 6, 5];
+const userInput = prompt("Угадайте одно из чисел: 5, 6, 7, 8 или 9");
+
+if (userInput === null) {
+    alert("Вы отменили игру");
+} else {
+    const guess = Number(userInput);
+    
+    if (isNaN(guess)) {
+        alert("Нужно ввести число!");
+    } else {
+        let found = false;
+        for (let i = 0; i < nums.length; i++) {
+            if (nums[i] === guess) {
+                found = true;
+                break;
+            }
+        }
+        
+        if (found) {
+            alert("Угадал!");
+        } else {
+            alert("Не угадал!");
+        }
     }
-    let cube = num * num * num;
-    return `${num} в кубе равняется ${cube}`;
 }
 
-// Задание 7 
+// Задание 8
+const str = 'abcdef';
+console.log("Исходная строка:", str);
+const reversedStr = str.split('').reverse().join('');
+console.log("Перевернутая строка:", reversedStr);
 
-const circle1 = {
-    radius: 5,
-    
-    getArea: function() {
-        return Math.PI * this.radius * this.radius;
-    },
-    
-    getPerimeter: function() {
-        return 2 * Math.PI * this.radius;
-    }
-};
+// Задание 9
+const array9 = [[1, 2, 3], [4, 5, 6]];
+console.log("Исходный массив:", array9);
+const flatArray = [].concat(...array9);
+console.log("Преобразованный массив (spread):", flatArray);
 
-const circle2 = {
-    radius: 10,
-    
-    getArea: function() {
-        return Math.PI * Math.pow(this.radius, 2);
-    },
-    
-    getPerimeter: function() {
-        return 2 * Math.PI * this.radius;
+// Задание 10
+const numbers10 = [];
+for (let i = 0; i < 10; i++) {
+    numbers10.push(Math.floor(Math.random() * 10) + 1);
+}
+console.log("Созданный массив:", numbers10);
+for (let i = 0; i < numbers10.length - 1; i++) {
+    const current = numbers10[i];
+    const next = numbers10[i + 1];
+    const sum = current + next;
+    console.log(`Элемент ${i}: ${current} + элемент ${i + 1}: ${next} = ${sum}`);
+}
+
+// Задание 11
+function squaresSimple(numbers) {
+    let result = [];
+    for (let i = 0; i < numbers.length; i++) {
+        result.push(numbers[i] * numbers[i]);
     }
-};
+    return result;
+}
+console.log("Квадраты [2, 3, 4]:", squaresSimple([2, 3, 4]));
+
+// Задание 12
+function lengthsSimple(words) {
+    let result = [];
+    for (let i = 0; i < words.length; i++) {
+        result.push(words[i].length);
+    }
+    return result;
+}
+console.log('Длины ["cat", "dog"]:', lengthsSimple(["cat", "dog"]));
+
+// Задание 13
+function negativesSimple(numbers) {
+    let result = [];
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] < 0) {
+            result.push(numbers[i]);
+        }
+    }
+    return result;
+}
+console.log("Отрицательные из [1, -1, 2, -2]:", negativesSimple([1, -1, 2, -2]));
+
+// Задание 14
+let arr14 = [];
+for (let i = 0; i < 10; i++) {
+    arr14.push(Math.floor(Math.random() * 11));
+}
+let evens = [];
+for (let i = 0; i < arr14.length; i++) {
+    if (arr14[i] % 2 === 0) {
+        evens.push(arr14[i]);
+    }
+}
+console.log("Массив:", arr14);
+console.log("Четные числа:", evens);
+
+// Задание 15
+let arr15 = [];
+for (let i = 0; i < 6; i++) {
+    arr15.push(Math.floor(Math.random() * 10) + 1);
+}
+let sum = 0;
+for (let i = 0; i < arr15.length; i++) {
+    sum += arr15[i];
+}
+let average = sum / arr15.length;
+console.log("Массив:", arr15);
+console.log("Среднее:", average.toFixed(2));
