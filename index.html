@@ -148,7 +148,7 @@
             <div class="mini__content">
                 <h2 class="mini__name">Простая арифметика</h2>
                 <p class="mini__desc">Попробуй решить простые арифметические задачи.</p>
-                <button class="mini__button">Играть!</button>
+                <button class="mini__button" onclick="playArithmeticGame()">Играть!</button>
             </div>
         </article>
         <article id="turn-text" class="mini__card">
@@ -190,9 +190,6 @@
 <div class="mobile-games center">
     <h2 class="mobile-games__title">Мини-игры</h2>
     
-    <!-- ИСПРАВЛЕНО: все mini__desc заменены на super__desc в мобильных карточках -->
-    <!-- ИСПРАВЛЕНО: все mini__button заменены на super__button в мобильных карточках -->
-    <!-- ИСПРАВЛЕНО: hero__button заменены на super__button в мобильных карточках -->
     
     <article class="games-card box-white">
         <a href="#">
@@ -211,7 +208,7 @@
             <div class="super">
                 <h2 class="super__description">Простая арифметика</h2>
                 <p class="super__desc">Попробуй решить простые арифметические задачи.</p>
-                <button class="super__button">Играть!</button>
+                <button class="super__button" onclick="playArithmeticGame()">Играть!</button>
             </div>
         </a>
     </article>
@@ -259,7 +256,6 @@
             <div class="super">
                 <h2 class="super__description">Генератор случайных цветов</h2>
                 <p class="super__desc">Игра, в которой при клике на кнопку фон страницы меняется на случайный.</p>
-                <!-- ИСПРАВЛЕНО: убрал .center из класса кнопки -->
                 <button class="super__button">Играть!</button>
             </div>
         </a>
@@ -311,5 +307,76 @@
                 alert("Слишком большое! Попробуйте меньше.");
             }
         }
+    }
+</script>
+
+<!-- мини-игра "Простая арифметика" -->
+<script>
+    function playArithmeticGame() {
+        let score = 0;
+        let totalQuestions = 5;
+        
+        alert("Добро пожаловать в игру 'Простая арифметика'!\nРешите 5 арифметических задач.");
+        
+        for (let i = 0; i < totalQuestions; i++) {
+            let num1 = Math.floor(Math.random() * 20) + 1;
+            let num2 = Math.floor(Math.random() * 20) + 1;
+            
+            let operations = ['+', '-', '*', '/'];
+            let operation = operations[Math.floor(Math.random() * operations.length)];
+            
+            if (operation === '/') {
+                num1 = num1 * num2;
+            }
+            
+            // Вычисляем правильный ответ
+            let correctAnswer;
+            switch (operation) {
+                case '+':
+                    correctAnswer = num1 + num2;
+                    break;
+                case '-':
+                    correctAnswer = num1 - num2;
+                    break;
+                case '*':
+                    correctAnswer = num1 * num2;
+                    break;
+                case '/':
+                    correctAnswer = num1 / num2;
+                    break;
+            }
+            
+            let question = `Вопрос ${i + 1} из ${totalQuestions}:\nСколько будет ${num1} ${operation} ${num2}?`;
+            
+            let userAnswer;
+            while (true) {
+                userAnswer = prompt(question + "\n(Введите число или нажмите 'Отмена' для выхода)");
+                
+                if (userAnswer === null) {
+                    alert(`Игра отменена. Ваш счет: ${score} из ${i}`);
+                    return;
+                }
+                
+                userAnswer = parseFloat(userAnswer);
+                
+                // Проверяем, является ли ответ числом
+                if (isNaN(userAnswer)) {
+                    alert("Пожалуйста, введите число!");
+                    continue;
+                }
+                
+                break;
+            }
+            
+            // Проверяем ответ
+            if (Math.abs(userAnswer - correctAnswer) < 0.001) {
+                alert("✅ Правильно! Молодец!");
+                score++;
+            } else {
+                alert(`❌ Неправильно. Правильный ответ: ${correctAnswer}`);
+            }
+        }
+        
+        alert(`Игра окончена!\nВаш результат: ${score} из ${totalQuestions} правильных ответов\n(${(score/totalQuestions*100).toFixed(0)}%)`);
     }
 </script>
