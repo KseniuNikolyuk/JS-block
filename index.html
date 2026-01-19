@@ -6,6 +6,12 @@
     <title>Интерьер</title>
     <link rel="stylesheet" href="scss/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Добавляем плавный скроллинг */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 <body>
     <header class="hero">
@@ -59,7 +65,7 @@
     <div class="games">
         <div class="games__column">
             <article class="games-card box-white">
-                <a href="#">
+                <a href="#guess-num">
                     <img src="img/game_one.png" alt="игра №1:'Угадай число'">
                     <div class="super">
                         <h3 class="super__title ">Игра № 1</h3>
@@ -69,7 +75,7 @@
             </article>
 
             <article class="games-card box-white">
-                <a href="#">
+                <a href="#rps">
                     <img src="img/game_four.png" alt="игра №4:'Камень, ножницы, бумага'">
                     <div class="super">
                         <h3 class="super__title">Игра № 4</h3>
@@ -85,7 +91,7 @@
 
         <div class="games__column">
             <article class="games-card box-white">
-                <a href="#">
+                <a href="#simple-arithmetic">
                     <img src="img/game_two.png" alt="игра №2:'Простая арифметика'">
                     <div class="super">
                         <h3 class="super__title">Игра № 2</h3>
@@ -94,7 +100,7 @@
                 </a>
             </article>
             <article class="games-card box-white">
-                <a href="#">
+                <a href="#simple-quiz">
                     <img src="img/game_five.png" alt="игра №5:'Простая викторина'">
                     <div class="super">
                         <h3 class="super__title">Игра № 5</h3>
@@ -106,7 +112,7 @@
 
         <div class="games__column">
             <article class="games-card box-white">
-                <a href="#">
+                <a href="#turn-text">
                     <img src="img/game_three.png" alt="игра №3:'Переверни текст'">
                     <div class="super">
                         <h3 class="super__title">Игра № 3</h3>
@@ -115,7 +121,7 @@
                 </a>
             </article>
             <article class="games-card box-white">
-                <a href="#">
+                <a href="#random-color">
                     <img src="img/game_six.png" alt="игра №6:'Генератор случайных цвето'">
                     <div class="super">
                         <h3 class="super__title">Игра № 6</h3>
@@ -155,32 +161,32 @@
             <div class="mini__content">
                 <h2 class="mini__name">Переверни текст</h2>
                 <p class="mini__desc">Попробуй ввести текст, который будет перевернут.</p>
-                <button class="mini__button">Играть!</button>
+                <button class="mini__button" onclick="playReverseTextGame()">Играть!</button>
             </div>
             <img class="mini__img" src="img/card3.png" alt="Переверни текст">
         </article>
         <article id="rps" class="mini__card">
-            <img class="mini__img" src="img/card4.png" alt="Камень, ножницы, бумага">
+            <img class="mini__img" src="img/card5.png" alt="Камень, ножницы, бумага">
             <div class="mini__content">
                 <h2 class="mini__name">Камень, ножницы, бумага</h2>
                 <p class="mini__desc">Сыграй в популярную игру против компьютера.</p>
-                <button class="mini__button">Играть!</button>
+                <button class="mini__button" onclick="playRockPaperScissorsGame()">Играть!</button>
             </div>
         </article>
         <article id="simple-quiz" class="mini__card">
             <div class="mini__content">
                 <h2 class="mini__name">Простая викторина</h2>
                 <p class="mini__desc">Отвечай на вопросы викторины с вариантами ответов.</p>
-                <button class="mini__button">Играть!</button>
+                <button class="mini__button" onclick="playQuizGame()">Играть!</button>
             </div>
-            <img class="mini__img" src="img/card5.png" alt="Простая викторина">
+            <img class="mini__img" src="img/card4.png" alt="Простая викторина">
         </article>
         <article id="random-color" class="mini__card">
             <img class="mini__img" src="img/card6.png" alt="Генератор случайных цветов">
             <div class="mini__content">
                 <h2 class="mini__name">Генератор случайных цветов</h2>
                 <p class="mini__desc">Игра, в которой при клике на кнопку фон страницы меняется на случайный.</p>
-                <button class="mini__button">Играть!</button>
+                <button class="mini__button" onclick="playRandomColorGame()">Играть!</button>
             </div>
         </article>
     </div>
@@ -192,7 +198,7 @@
     
     
     <article class="games-card box-white">
-        <a href="#">
+        <a href="#guess-num">
             <img src="img/game_one.png" alt="игра №1:'Угадай число'">
             <div class="super">
                 <h2 class="super__description">Угадай число</h2>
@@ -203,7 +209,7 @@
     </article>
 
     <article class="games-card box-white">
-        <a href="#">
+        <a href="#simple-arithmetic">
             <img src="img/game_two.png" alt="игра №2:'Простая арифметика'">
             <div class="super">
                 <h2 class="super__description">Простая арифметика</h2>
@@ -214,18 +220,18 @@
     </article>
 
     <article class="games-card box-white">
-        <a href="#">
+        <a href="#turn-text">
             <img src="img/game_three.png" alt="игра №3:'Переверни текст'">
             <div class="super">
                 <h2 class="super__description small">Переверни текст</h2>
                 <p class="super__desc">Попробуй ввести текст, который будет перевернут.</p>
-                <button class="super__button">Играть!</button>
+                <button class="super__button" onclick="playReverseTextGame()">Играть!</button>
             </div>
         </a>
     </article>
 
     <article class="games-card box-white">
-        <a href="#">
+        <a href="#rps">
             <img src="img/game_four.png" alt="игра №4:'Камень, ножницы, бумага'">
             <div class="super">
                 <h2 class="super__description">
@@ -234,29 +240,29 @@
                     бумага
                 </h2> 
                 <p class="super__desc">Сыграй в популярную игру против компьютера.</p>  
-                <button class="super__button">Играть!</button>
+                <button class="super__button" onclick="playRockPaperScissorsGame()">Играть!</button>
             </div>
         </a>
     </article>
 
     <article class="games-card box-white">
-        <a href="#">
+        <a href="#simple-quiz">
             <img src="img/game_five.png" alt="игра №5:'Простая викторина'">
             <div class="super">
                 <h2 class="super__description">Простая викторина</h2>
                 <p class="super__desc">Отвечай на вопросы викторины с вариантами ответов.</p>
-                <button class="super__button">Играть!</button>
+                <button class="super__button" onclick="playQuizGame()">Играть!</button>
             </div>
         </a>
     </article>
 
     <article class="games-card box-white">
-        <a href="#">
+        <a href="#random-color">
             <img src="img/game_six.png" alt="игра №6:'Генератор случайных цвето'">
             <div class="super">
                 <h2 class="super__description">Генератор случайных цветов</h2>
                 <p class="super__desc">Игра, в которой при клике на кнопку фон страницы меняется на случайный.</p>
-                <button class="super__button">Играть!</button>
+                <button class="super__button" onclick="playRandomColorGame()">Играть!</button>
             </div>
         </a>
     </article>
@@ -266,8 +272,10 @@
     <p class="footer__text">Все права защищены.</p>
 </footer> 
 
-<!-- мини-игра "Угадай число" -->
+
+<!-- мини-игры -->
 <script>
+    // Мини-игра "Угадай число"
     function playSimpleGame() {
         let secret = Math.floor(Math.random() * 100) + 1;
         let attempts = 0;
@@ -308,10 +316,8 @@
             }
         }
     }
-</script>
 
-<!-- мини-игра "Простая арифметика" -->
-<script>
+    // Мини-игра "Простая арифметика"
     function playArithmeticGame() {
         let score = 0;
         let totalQuestions = 5;
@@ -379,4 +385,109 @@
         
         alert(`Игра окончена!\nВаш результат: ${score} из ${totalQuestions} правильных ответов\n(${(score/totalQuestions*100).toFixed(0)}%)`);
     }
+
+    // Мини-игра "Переверни текст"
+    function playReverseTextGame() {
+        let userText = prompt("Введите текст, который нужно перевернуть:");
+        
+        if (userText === null) {
+            alert("Игра отменена.");
+            return;
+        }
+        
+        if (userText.trim() === "") {
+            alert("Вы не ввели текст!");
+            return;
+        }
+        
+        let reversedText = userText.split('').reverse().join('');
+        
+        alert(`Оригинальный текст: ${userText}\nПеревернутый текст: ${reversedText}`);
+    }
+
+    // Мини-игра "Викторина"
+    function playQuizGame() {
+        const quiz = [
+            {
+                question: "Какой цвет небо?",
+                options: ["1. Красный", "2. Синий", "3. Зеленый"],
+                correctAnswer: 2 
+            },
+            {
+                question: "Сколько дней в неделе?",
+                options: ["1. Шесть", "2. Семь", "3. Восемь"],
+                correctAnswer: 2
+            },
+            {
+                question: "Сколько у человека пальцев на одной руке?",
+                options: ["1. Четыре", "2. Пять", "3. Шесть"],
+                correctAnswer: 2
+            }
+        ];
+        
+        let score = 0;
+        
+        alert("Добро пожаловать в викторину!\nОтветьте на 3 вопроса.");
+        
+        for (let i = 0; i < quiz.length; i++) {
+            let currentQuestion = quiz[i];
+            
+            let questionText = `Вопрос ${i + 1} из ${quiz.length}:\n${currentQuestion.question}\n\n`;
+            questionText += currentQuestion.options.join('\n');
+            questionText += "\n\nВведите номер правильного ответа (1, 2 или 3)";
+            
+            let userAnswer;
+            while (true) {
+                userAnswer = prompt(questionText + "\n(Или нажмите 'Отмена' для выхода)");
+                
+                if (userAnswer === null) {
+                    alert(`Игра отменена. Ваш счет: ${score} из ${i}`);
+                    return;
+                }
+                
+                userAnswer = parseInt(userAnswer);
+                
+                if (isNaN(userAnswer) || userAnswer < 1 || userAnswer > 3) {
+                    alert("Пожалуйста, введите число от 1 до 3!");
+                    continue;
+                }
+                
+                break;
+            }
+            
+            // Проверяем ответ
+            if (userAnswer === currentQuestion.correctAnswer) {
+                alert("✅ Правильно! Молодец!");
+                score++;
+            } else {
+                alert(`❌ Неправильно. Правильный ответ: ${currentQuestion.correctAnswer}`);
+            }
+        }
+        
+        // Выводим итоговый результат
+        alert(`Викторина окончена!\nВаш результат: ${score} из ${quiz.length} правильных ответов\n(${(score/quiz.length*100).toFixed(0)}%)`);
+    }
+
+    // Мини-игра "Камень, ножницы, бумага" 
+    function playRockPaperScissorsGame() {
+        alert("Игра 'Камень, ножницы, бумага' скоро будет доступна!");
+    }
+
+    // Мини-игра "Генератор случайных цветов" 
+    function playRandomColorGame() {
+        alert("Игра 'Генератор случайных цветов' скоро будет доступна!");
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.games-card a, .super__button, .mini__button').forEach(element => {
+            element.addEventListener('click', function(e) {
+                if (this.tagName === 'A' && this.getAttribute('href') && this.getAttribute('href').startsWith('#')) {
+                    return;
+                }
+                e.preventDefault();
+            });
+        });
+    });
 </script>
+</body>
+</html>
