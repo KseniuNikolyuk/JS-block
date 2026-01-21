@@ -72,3 +72,70 @@ function Game2() {
         alert('Неправильно!\n' + problem + ' = ' + correctAnswer + '\nВаш ответ: ' + userAnswer);
     }
 }
+
+function Game3() {
+    let userText = prompt("Введите текст, который нужно перевернуть:");
+    
+    if (userText === null) {
+        alert("Игра отменена!");
+        return;
+    }
+    
+    if (userText.trim() === "") {
+        alert("Вы не ввели текст!");
+        return;
+    }
+    
+    let reversedText = userText.split('').reverse().join('');
+    
+    alert(`Исходный текст: ${userText}\nПеревернутый текст: ${reversedText}`);
+}
+
+function Game5() {
+    const quiz = [
+        {
+            question: "Какого цвета небо?",
+            options: ["1. Синего", "2. Красного", "3. Желтого"],
+            correctAnswer: 1
+        },
+        {
+            question: "Сколько дней в неделе?",
+            options: ["1. Шесть", "2. Семь", "3. Восемь"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько у человека пальцев на одной руке?",
+            options: ["1. Четыре", "2. Шесть", "3. Пять"],
+            correctAnswer: 3
+        }
+    ];
+    
+    let score = 0;
+    
+    for (let i = 0; i < quiz.length; i++) {
+        const currentQuestion = quiz[i];
+        
+        let questionText = `Вопрос ${i + 1}: ${currentQuestion.question}\n\n`;
+        questionText += currentQuestion.options.join('\n');
+        questionText += "\n\nВведите номер правильного ответа:";
+        
+        let userAnswer = prompt(questionText);
+        
+        if (userAnswer === null) {
+            alert("Викторина отменена!");
+            return;
+        }
+        
+        userAnswer = parseInt(userAnswer);
+        
+        if (userAnswer === currentQuestion.correctAnswer) {
+            score++;
+            alert("Правильно! ✓");
+        } else {
+            let correctOption = currentQuestion.options[currentQuestion.correctAnswer - 1];
+            alert(`Неправильно! Правильный ответ: ${correctOption}`);
+        }
+    }
+
+    alert(`Викторина завершена!\n\nВы правильно ответили на ${score} из ${quiz.length} вопросов.`);
+}

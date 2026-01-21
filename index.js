@@ -283,163 +283,163 @@
 //     }
 // };
 
-// Работа с кодом дз 5
+// // Работа с кодом дз 5
 
-// Задание 1 
-const numbers1 = [1, 5, 4, 10, 0, 3];
+// // Задание 1 
+// const numbers1 = [1, 5, 4, 10, 0, 3];
 
-for (let i = 0; i < numbers1.length; i++) {
-    console.log(numbers1[i]);
-    if (numbers1[i] === 10) {
-        break;
-    }
-}
+// for (let i = 0; i < numbers1.length; i++) {
+//     console.log(numbers1[i]);
+//     if (numbers1[i] === 10) {
+//         break;
+//     }
+// }
 
-// Задание 2
-const numbers2 = [1, 5, 4, 10, 0, 3];
-const indexOfFour = numbers2.indexOf(4);
-console.log(`Индекс значения 4: ${indexOfFour}`);
+// // Задание 2
+// const numbers2 = [1, 5, 4, 10, 0, 3];
+// const indexOfFour = numbers2.indexOf(4);
+// console.log(`Индекс значения 4: ${indexOfFour}`);
 
-// Задание 3
-const numbers3 = [1, 3, 5, 10, 20];
-console.log(`Элементы через пробел: ${numbers3.join(' ')}`);
+// // Задание 3
+// const numbers3 = [1, 3, 5, 10, 20];
+// console.log(`Элементы через пробел: ${numbers3.join(' ')}`);
 
-// Задание 4
-const array4 = [];
-for (let i = 0; i < 3; i++) {
-    const innerArray = [];
-    for (let j = 0; j < 3; j++) {
-        innerArray.push(1);
-    }
-    array4.push(innerArray);
-}
-console.log("Многомерный массив:", array4);
+// // Задание 4
+// const array4 = [];
+// for (let i = 0; i < 3; i++) {
+//     const innerArray = [];
+//     for (let j = 0; j < 3; j++) {
+//         innerArray.push(1);
+//     }
+//     array4.push(innerArray);
+// }
+// console.log("Многомерный массив:", array4);
 
-// Задание 5
-const array5 = [1, 1, 1];
-console.log("Исходный массив:", array5);
-array5.push(2, 2, 2);
-console.log("Массив после добавления:", array5);
+// // Задание 5
+// const array5 = [1, 1, 1];
+// console.log("Исходный массив:", array5);
+// array5.push(2, 2, 2);
+// console.log("Массив после добавления:", array5);
 
-// Задание 6
-let arr6 = [9, 8, 7, 'a', 6, 5];
-console.log("Исходный массив:", arr6);
-arr6.sort();
-console.log("После sort():", arr6);
-const indexOfA = arr6.indexOf('a');
-if (indexOfA !== -1) {
-    arr6.splice(indexOfA, 1);
-}
-console.log("После удаления 'a':", arr6);
+// // Задание 6
+// let arr6 = [9, 8, 7, 'a', 6, 5];
+// console.log("Исходный массив:", arr6);
+// arr6.sort();
+// console.log("После sort():", arr6);
+// const indexOfA = arr6.indexOf('a');
+// if (indexOfA !== -1) {
+//     arr6.splice(indexOfA, 1);
+// }
+// console.log("После удаления 'a':", arr6);
 
-// Задание 7
-const nums = [9, 8, 7, 6, 5];
-const userInput = prompt("Угадайте одно из чисел: 5, 6, 7, 8 или 9");
+// // Задание 7
+// const nums = [9, 8, 7, 6, 5];
+// const userInput = prompt("Угадайте одно из чисел: 5, 6, 7, 8 или 9");
 
-if (userInput === null) {
-    alert("Вы отменили игру");
-} else {
-    const guess = Number(userInput);
+// if (userInput === null) {
+//     alert("Вы отменили игру");
+// } else {
+//     const guess = Number(userInput);
     
-    if (isNaN(guess)) {
-        alert("Нужно ввести число!");
-    } else {
-        let found = false;
-        for (let i = 0; i < nums.length; i++) {
-            if (nums[i] === guess) {
-                found = true;
-                break;
-            }
-        }
+//     if (isNaN(guess)) {
+//         alert("Нужно ввести число!");
+//     } else {
+//         let found = false;
+//         for (let i = 0; i < nums.length; i++) {
+//             if (nums[i] === guess) {
+//                 found = true;
+//                 break;
+//             }
+//         }
         
-        if (found) {
-            alert("Угадал!");
-        } else {
-            alert("Не угадал!");
-        }
-    }
-}
+//         if (found) {
+//             alert("Угадал!");
+//         } else {
+//             alert("Не угадал!");
+//         }
+//     }
+// }
 
-// Задание 8
-const str = 'abcdef';
-console.log("Исходная строка:", str);
-const reversedStr = str.split('').reverse().join('');
-console.log("Перевернутая строка:", reversedStr);
+// // Задание 8
+// const str = 'abcdef';
+// console.log("Исходная строка:", str);
+// const reversedStr = str.split('').reverse().join('');
+// console.log("Перевернутая строка:", reversedStr);
 
-// Задание 9
-const array9 = [[1, 2, 3], [4, 5, 6]];
-console.log("Исходный массив:", array9);
-const flatArray = [].concat(...array9);
-console.log("Преобразованный массив (spread):", flatArray);
+// // Задание 9
+// const array9 = [[1, 2, 3], [4, 5, 6]];
+// console.log("Исходный массив:", array9);
+// const flatArray = [].concat(...array9);
+// console.log("Преобразованный массив (spread):", flatArray);
 
-// Задание 10
-const numbers10 = [];
-for (let i = 0; i < 10; i++) {
-    numbers10.push(Math.floor(Math.random() * 10) + 1);
-}
-console.log("Созданный массив:", numbers10);
-for (let i = 0; i < numbers10.length - 1; i++) {
-    const current = numbers10[i];
-    const next = numbers10[i + 1];
-    const sum = current + next;
-    console.log(`Элемент ${i}: ${current} + элемент ${i + 1}: ${next} = ${sum}`);
-}
+// // Задание 10
+// const numbers10 = [];
+// for (let i = 0; i < 10; i++) {
+//     numbers10.push(Math.floor(Math.random() * 10) + 1);
+// }
+// console.log("Созданный массив:", numbers10);
+// for (let i = 0; i < numbers10.length - 1; i++) {
+//     const current = numbers10[i];
+//     const next = numbers10[i + 1];
+//     const sum = current + next;
+//     console.log(`Элемент ${i}: ${current} + элемент ${i + 1}: ${next} = ${sum}`);
+// }
 
-// Задание 11
-function squaresSimple(numbers) {
-    let result = [];
-    for (let i = 0; i < numbers.length; i++) {
-        result.push(numbers[i] * numbers[i]);
-    }
-    return result;
-}
-console.log("Квадраты [2, 3, 4]:", squaresSimple([2, 3, 4]));
+// // Задание 11
+// function squaresSimple(numbers) {
+//     let result = [];
+//     for (let i = 0; i < numbers.length; i++) {
+//         result.push(numbers[i] * numbers[i]);
+//     }
+//     return result;
+// }
+// console.log("Квадраты [2, 3, 4]:", squaresSimple([2, 3, 4]));
 
-// Задание 12
-function lengthsSimple(words) {
-    let result = [];
-    for (let i = 0; i < words.length; i++) {
-        result.push(words[i].length);
-    }
-    return result;
-}
-console.log('Длины ["cat", "dog"]:', lengthsSimple(["cat", "dog"]));
+// // Задание 12
+// function lengthsSimple(words) {
+//     let result = [];
+//     for (let i = 0; i < words.length; i++) {
+//         result.push(words[i].length);
+//     }
+//     return result;
+// }
+// console.log('Длины ["cat", "dog"]:', lengthsSimple(["cat", "dog"]));
 
-// Задание 13
-function negativesSimple(numbers) {
-    let result = [];
-    for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i] < 0) {
-            result.push(numbers[i]);
-        }
-    }
-    return result;
-}
-console.log("Отрицательные из [1, -1, 2, -2]:", negativesSimple([1, -1, 2, -2]));
+// // Задание 13
+// function negativesSimple(numbers) {
+//     let result = [];
+//     for (let i = 0; i < numbers.length; i++) {
+//         if (numbers[i] < 0) {
+//             result.push(numbers[i]);
+//         }
+//     }
+//     return result;
+// }
+// console.log("Отрицательные из [1, -1, 2, -2]:", negativesSimple([1, -1, 2, -2]));
 
-// Задание 14
-let arr14 = [];
-for (let i = 0; i < 10; i++) {
-    arr14.push(Math.floor(Math.random() * 11));
-}
-let evens = [];
-for (let i = 0; i < arr14.length; i++) {
-    if (arr14[i] % 2 === 0) {
-        evens.push(arr14[i]);
-    }
-}
-console.log("Массив:", arr14);
-console.log("Четные числа:", evens);
+// // Задание 14
+// let arr14 = [];
+// for (let i = 0; i < 10; i++) {
+//     arr14.push(Math.floor(Math.random() * 11));
+// }
+// let evens = [];
+// for (let i = 0; i < arr14.length; i++) {
+//     if (arr14[i] % 2 === 0) {
+//         evens.push(arr14[i]);
+//     }
+// }
+// console.log("Массив:", arr14);
+// console.log("Четные числа:", evens);
 
-// Задание 15
-let arr15 = [];
-for (let i = 0; i < 6; i++) {
-    arr15.push(Math.floor(Math.random() * 10) + 1);
-}
-let sum = 0;
-for (let i = 0; i < arr15.length; i++) {
-    sum += arr15[i];
-}
-let average = sum / arr15.length;
-console.log("Массив:", arr15);
-console.log("Среднее:", average.toFixed(2));
+// // Задание 15
+// let arr15 = [];
+// for (let i = 0; i < 6; i++) {
+//     arr15.push(Math.floor(Math.random() * 10) + 1);
+// }
+// let sum = 0;
+// for (let i = 0; i < arr15.length; i++) {
+//     sum += arr15[i];
+// }
+// let average = sum / arr15.length;
+// console.log("Массив:", arr15);
+// console.log("Среднее:", average.toFixed(2));
