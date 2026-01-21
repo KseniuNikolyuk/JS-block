@@ -91,6 +91,55 @@ function Game3() {
     alert(`Исходный текст: ${userText}\nПеревернутый текст: ${reversedText}`);
 }
 
+function Game4() {
+    const options = ["камень", "ножницы", "бумага"];
+    
+    let userChoice = prompt("Сделайте ваш выбор:\n1. Камень\n2. Ножницы\n3. Бумага\n\nВведите название или номер (1, 2, 3):");
+    
+    if (userChoice === null) {
+        alert("Игра отменена!");
+        return;
+    }
+    
+    userChoice = userChoice.toLowerCase().trim();
+    
+    if (userChoice === "1") {
+        userChoice = "камень";
+    } else if (userChoice === "2") {
+        userChoice = "ножницы";
+    } else if (userChoice === "3") {
+        userChoice = "бумага";
+    }
+    
+    if (!options.includes(userChoice)) {
+        alert("Некорректный ввод! Пожалуйста, выберите 'камень', 'ножницы' или 'бумага'.");
+        return;
+    }
+    
+    const randomIndex = Math.floor(Math.random() * 3);
+    const computerChoice = options[randomIndex];
+    
+    let result;
+    
+    if (userChoice === computerChoice) {
+        result = "Ничья!";
+    } else if (
+        (userChoice === "камень" && computerChoice === "ножницы") ||
+        (userChoice === "ножницы" && computerChoice === "бумага") ||
+        (userChoice === "бумага" && computerChoice === "камень")
+    ) {
+        result = "Вы победили!";
+    } else {
+        result = "Компьютер победил!";
+    }
+    
+    let resultMessage = `Ваш выбор: ${userChoice}\n`;
+    resultMessage += `Выбор компьютера: ${computerChoice}\n\n`;
+    resultMessage += `${result}`;
+    
+    alert(resultMessage);
+}
+
 function Game5() {
     const quiz = [
         {
