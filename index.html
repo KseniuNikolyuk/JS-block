@@ -210,6 +210,130 @@
     <footer class="footer">
         <p class="footer__text">Все права защищены.</p>
     </footer>
+
+    <div style="display: none;">
+        <!-- Задание 1 -->
+
+        <h1 id="noneText">Скрытый заголовок</h1>
+        <button id="none-text">Показать/скрыть текст</button>
+
+        <!-- Задание 2 -->
+
+        <p id="colorText">Тект меняет цвет</p>
+        <button id="colorTextBtn">Поменять цвет</button>
+
+        <!-- Задание 3 -->
+
+        <h1 id="changeText">Текст меняется</h1>
+        <button id="change-text">Изменить текст</button>
+
+        <!-- Задание 4 -->
+
+        <p class="description">1-ый элемент с классом description</p>
+        <p class="description">2-ой элемент с классом description</p>
+        <p class="notdescription">Элемент другого класса</p>
+        <p class="description">3-ий элемент с классом description</p>
+        <button id="changeDescriptionBtn">Изменить элементы description</button>
+
+        <!-- Задание 5 -->
+
+        <p class="description-task5">1-ый элемент с классом description</p>
+        <p class="description-task5">2-ой элемент с классом description</p>
+        <p>Элемент другого класса</p>
+        <p class="description-task5">3-ий элемент с классом description</p>
+        
+        <!-- Задание 6 -->
+
+        <button id="addElementButton">Добавить новый элемент</button>
+        <div id="newElementsContainer"></div>
+        
+        <!-- Задание 7 -->
+
+        <p class="description-to-delete">Первый элемент для удаления (класс description)</p>
+        <p class="description-to-delete">Второй элемент для удаления (класс description)</p>
+        <p class="description-to-delete">Третий элемент для удаления (класс description)</p>
+        <button id="deleteElementButton">Удалить первый элемент с классом description</button>
+
+
+    </div>
+    <script>
+        // Задание 1
+
+        const noneTextEl = document.querySelector('#noneText');
+        const noneTextBtn = document.querySelector('#none-text');
+
+        noneTextBtn.addEventListener('click', function() {
+            if (noneTextEl.style.display === 'none') {
+                noneTextEl.style.display = 'block';
+                noneTextBtn.textContent = 'Скрыть текст'; 
+            } else {
+                noneTextEl.style.display = 'none';
+                noneTextBtn.textContent = 'Показать текст'; 
+            }
+        });
+
+        // Задание 2
+
+        const colorTextEl = document.querySelector('#colorText');
+        const colorTextBtn = document.querySelector('#colorTextBtn');
+
+        colorTextBtn.addEventListener('click', function(){
+            colorTextEl.style.color = 'blue';
+        })
+
+        // Задание 3
+
+        const changeTextEl = document.querySelector('#changeText');
+        const changeTextBtn = document.querySelector('#change-text');
+        
+        changeTextBtn.addEventListener('click', function() {
+            changeTextEl.textContent = 'Привет, Мир!';
+        });
+
+        // Задание 4
+
+        const changeDescriptionBtn = document.querySelector('#changeDescriptionBtn');
+        
+        changeDescriptionBtn.addEventListener('click', function() {
+            const descriptionElements = document.querySelectorAll('.description');
+            
+            descriptionElements.forEach(function(element) {
+                element.textContent = 'Измененный текст';
+            });
+        });
+
+        // Задание 5
+        const descriptionElementsTask5 = document.querySelectorAll('.description-task5');
+        descriptionElementsTask5.forEach(function(element) {
+            element.textContent = 'Новый текст';
+        });
+
+        // Задание 6
+        const addElementButton = document.querySelector('#addElementButton');
+        const newElementsContainer = document.querySelector('#newElementsContainer');
+        
+        addElementButton.addEventListener('click', function() {
+            const newParagraph = document.createElement('p');
+            newParagraph.textContent = 'Новый абзац';
+            newElementsContainer.appendChild(newParagraph);
+        });
+
+        // Задание 7 
+        const deleteElementButton = document.querySelector('#deleteElementButton');
+        
+        deleteElementButton.addEventListener('click', function() {
+            const firstDescriptionElement = document.querySelector('.description-to-delete');
+            if (firstDescriptionElement) {
+                firstDescriptionElement.remove();
+                deleteElementButton.textContent = 'Элемент удален!';
+                setTimeout(function() {
+                    deleteElementButton.textContent = 'Удалить первый элемент с классом description';
+                }, 1000);
+            }
+        });
+
+    </script>
+
     <script src='./index.js'></script>
     <script src="./games.js"></script>
 </body>
