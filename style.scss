@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .boards {
     max-width: 1200px;
     margin: 0 auto;
@@ -21,11 +25,11 @@ body {
 }
 .header {
   position: relative;
-  z-index: 10; /* Увеличиваем для контента */
+  z-index: 10;
 }
 .header-star {
   position: absolute;
-  z-index: 1; /* Все звезды на заднем плане */
+  z-index: 1;
 }
 
 .header-star--1 {
@@ -138,7 +142,7 @@ body {
 
 .about-games-section__star {
   position: absolute;
-  z-index: 1; /* Звезды на заднем плане */
+  z-index: 1; 
 }
 
 .about-games-section__star--1 {
@@ -161,7 +165,7 @@ body {
     flex-wrap: wrap;
     position: relative;
     flex-direction: row;
-    z-index: 5; /* Контент поверх звезд */
+    z-index: 5;
 }
 
 .games-block-1 {
@@ -263,7 +267,7 @@ body {
   
   &__star {
     position: absolute;
-    z-index: 1; /* Звезды на заднем плане */
+    z-index: 1;
   }
 
   &__star--1 {
@@ -360,15 +364,16 @@ body {
   text-align: left;
 }
 
-.mini-games__button {
+.mini-games__button,
+.card-game__button {
   width: 247px;
   height: 66px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10;
-  padding: 16px 28px 16px 28px;
+  gap: 10px;
+  padding: 16px 28px;
   border-radius: 60px;
   background: rgba(32, 32, 39, 1);
   color: rgba(255, 255, 255, 1);
@@ -376,15 +381,16 @@ body {
   font-size: 24px;
   font-weight: 600;
   line-height: 141.69%;
-  letter-spacing: 0%;
   text-align: center;
   transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
-}
+  border: none;
+  cursor: pointer;
 
-.mini-games__button:hover{
+  &:hover {
     background-color: white;
     color: black;
     transform: translateY(-2px);
+  }
 }
 
 .footer {

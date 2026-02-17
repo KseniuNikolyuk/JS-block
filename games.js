@@ -3,6 +3,11 @@ function Game1() {
     while(true) {
         let guess = prompt("Угадай число от 1 до 100.")
         guess = Number(guess);
+
+        if (userChoice === null) {
+            alert("Игра отменена!");
+            return;
+        }
         if (guess === secretNumber) {
             alert("Поздравляю! Ты угадал(а). Игра завершена")
             break
@@ -19,7 +24,7 @@ function Game2() {
     let num2 = Math.floor(Math.random() * 10) + 1;
     
     let operation;
-    let operationType = Math.floor(Math.random() * 4); // 0, 1, 2 или 3
+    let operationType = Math.floor(Math.random() * 4);
     
     if (operationType === 0) {
         operation = '+';
@@ -187,4 +192,14 @@ function Game5() {
     }
 
     alert(`Викторина завершена!\n\nВы правильно ответили на ${score} из ${quiz.length} вопросов.`);
+}
+
+function Game6() {
+    const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
+    const gamesSection = document.querySelector('.games-section');
+    if (gamesSection) {
+        gamesSection.style.backgroundColor = randomColor;
+    }
+    
+    alert(`Фон секции с играми изменён на цвет ${randomColor}`);
 }
