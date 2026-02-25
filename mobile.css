@@ -1,0 +1,153 @@
+@media (max-width: 768px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .header__title {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 0px;
+  }
+  .header__text {
+    font-size: 16px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+  }
+  .header__button {
+    font-size: 16px;
+    padding: 16px 28px;
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 32px auto 0;
+  }
+  .header-star--1 {
+    width: 35px;
+    top: 97px;
+    left: 37px;
+  }
+  .header-star--2 {
+    width: 21px;
+    left: 92px;
+    top: 64px;
+  }
+  .header-star--3 {
+    width: 21px;
+    bottom: 24px;
+    right: 86px;
+  }
+  .header-star--4 {
+    width: 35px;
+    bottom: 28px;
+    right: 32px;
+  }
+  .header-star--5 {
+    display: none;
+  }
+  .header-star--mob {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .about-games-box {
+    display: none;
+  }
+  .mini-game-title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 48px;
+  }
+  .mini-games {
+    display: none;
+    border-radius: 30px;
+    transition: none;
+  }
+  .mini-games__card {
+    background-color: white;
+    border-radius: 30px;
+    padding-bottom: 36px;
+  }
+  .mini-games__star {
+    display: none;
+  }
+  .mini-games-mob-1 {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+  }
+  .games-section {
+    padding: 48px 0 10px 0;
+  }
+  .card-game__name {
+    font-size: 32px;
+  }
+  .card-game__desc {
+    font-size: 16px;
+  }
+  .footer__text {
+    font-size: 16px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1023px) {
+  .about-games-box {
+    display: none;
+  }
+  .mini-game-title {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 49px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-bottom: 48px;
+  }
+  .mini-games {
+    display: none;
+    border-radius: 30px;
+    transition: none;
+  }
+  .mini-games__card {
+    background-color: white;
+    width: 378px;
+    border-radius: 30px;
+    padding-bottom: 36px;
+  }
+  .mini-games-mob-1 {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .games-section {
+    padding: 48px 0 20px 0;
+  }
+  .card-game {
+    width: 378px;
+  }
+  .card-game__name {
+    font-size: 48px;
+  }
+  .card-game__desc {
+    font-size: 24px;
+  }
+}
+@media (min-width: 1024px) {
+  .mini-games-mob {
+    display: none;
+  }
+}
+@media (max-width: 1328px) {
+  .games-block-first {
+    margin-bottom: 30px;
+  }
+}/*# sourceMappingURL=mobile.css.map */
