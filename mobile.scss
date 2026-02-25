@@ -1,6 +1,6 @@
 // Мобильная версия (до 768px)
 @media (max-width: 768px) {
-    .boards {
+    .center {
         padding-left: 16px;
         padding-right: 16px;
     }
@@ -68,7 +68,7 @@
         }
     }
     
-    .about-games-section {
+    .about-games-box {
         display: none;
     }
     
@@ -125,7 +125,7 @@
 
 // Планшетная версия (769px - 1023px)
 @media (min-width: 769px) and (max-width: 1023px) {
-    .about-games-section {
+    .about-games-box {
         display: none;
     }
     
@@ -184,7 +184,7 @@
 }
 
 @media (max-width: 1328px) {
-    .games-block-1 {
+    .games-block-first {
         margin-bottom: 30px;
     }
 }

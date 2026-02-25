@@ -1,24 +1,26 @@
+// Мини-игра "Угадай число"
 function Game1() {
     const secretNumber = Math.floor(Math.random() * 100) + 1;
     while(true) {
-        let guess = prompt("Угадай число от 1 до 100.")
+        let guess = prompt("Введите число от 1 до 100:")
         guess = Number(guess);
 
         if (userChoice === null) {
-            alert("Игра отменена!");
+            alert("Игра отменена. Возвращаюсь на главную!");
             return;
         }
         if (guess === secretNumber) {
-            alert("Поздравляю! Ты угадал(а). Игра завершена")
+            alert("Поздравляю! Вы угадали число. Игра завершена")
             break
         } else if (guess > secretNumber) {
             alert ("Попробуй снова) Слишком много")
         } else if (guess < secretNumber) {
-            alert ("Попробуй снова! Слишком мало")
+            alert ("Слишком большое! Попробуйте меньше.")
         }
     }
 }
 
+// Мини-игра "Простая арифметика"
 function Game2() {
     let num1 = Math.floor(Math.random() * 10) + 1;
     let num2 = Math.floor(Math.random() * 10) + 1;
@@ -72,12 +74,13 @@ function Game2() {
         alert('Пожалуйста, вводите только числа!');
     } 
     else if (userAnswerNumber === correctAnswer) {
-        alert('Правильно!\n' + problem + ' = ' + correctAnswer);
+        alert('✅ Правильно!\n' + problem + ' = ' + correctAnswer);
     } else {
-        alert('Неправильно!\n' + problem + ' = ' + correctAnswer + '\nВаш ответ: ' + userAnswer);
+        alert('❌ Неправильно.\n' + problem + ' = ' + correctAnswer + '\nВаш ответ: ' + userAnswer);
     }
 }
 
+// Мини-игра "Переверни текст"
 function Game3() {
     let userText = prompt("Введите текст, который нужно перевернуть:");
     
@@ -93,13 +96,20 @@ function Game3() {
     
     let reversedText = userText.split('').reverse().join('');
     
-    alert(`Исходный текст: ${userText}\nПеревернутый текст: ${reversedText}`);
+    alert(`Оригинальный текст: ${userText}\nПеревернутый текст: ${reversedText}`);
 }
 
+// Мини-игра "Камень, ножницы, бумага"
 function Game4() {
     const options = ["камень", "ножницы", "бумага"];
     
-    let userChoice = prompt("Сделайте ваш выбор:\n1. Камень\n2. Ножницы\n3. Бумага\n\nВведите название или номер (1, 2, 3):");
+    let userChoice = prompt("Добро пожаловать в игру 'Камень, ножницы, бумага'!\n\n" +
+          "Правила:\n" +
+          "• Камень побеждает ножницы (камень тупит ножницы)\n" +
+          "• Ножницы побеждают бумагу (ножницы режут бумагу)\n" +
+          "• Бумага побеждает камень (бумага оборачивает камень)\n" +
+          "• Одинаковые варианты - ничья\n\n" +
+          "Введите один из вариантов: камень, ножницы или бумага");
     
     if (userChoice === null) {
         alert("Игра отменена!");
@@ -145,11 +155,12 @@ function Game4() {
     alert(resultMessage);
 }
 
+// Мини-игра "Викторина"
 function Game5() {
     const quiz = [
         {
             question: "Какого цвета небо?",
-            options: ["1. Синего", "2. Красного", "3. Желтого"],
+            options: ["1. Красный", "2. Синий", "3. Зеленый"],
             correctAnswer: 1
         },
         {
@@ -159,7 +170,7 @@ function Game5() {
         },
         {
             question: "Сколько у человека пальцев на одной руке?",
-            options: ["1. Четыре", "2. Шесть", "3. Пять"],
+            options: ["1. Четыре", "2. Пять", "3. Шесть"],
             correctAnswer: 3
         }
     ];
@@ -171,7 +182,7 @@ function Game5() {
         
         let questionText = `Вопрос ${i + 1}: ${currentQuestion.question}\n\n`;
         questionText += currentQuestion.options.join('\n');
-        questionText += "\n\nВведите номер правильного ответа:";
+        questionText += "\n\nВведите номер правильного ответа (1, 2 или 3)";
         
         let userAnswer = prompt(questionText);
         
@@ -184,22 +195,21 @@ function Game5() {
         
         if (userAnswer === currentQuestion.correctAnswer) {
             score++;
-            alert("Правильно! ✓");
+            alert("✅ Правильно! Молодец!");
         } else {
             let correctOption = currentQuestion.options[currentQuestion.correctAnswer - 1];
-            alert(`Неправильно! Правильный ответ: ${correctOption}`);
+            alert(`❌ Неправильно. Правильный ответ: ${correctOption}`);
         }
     }
 
-    alert(`Викторина завершена!\n\nВы правильно ответили на ${score} из ${quiz.length} вопросов.`);
+    alert(`Викторина окончена!\n\nВы правильно ответили на ${score} из ${quiz.length} вопросов.`);
 }
 
+// Мини-игра "Генератор случайных цветов"
 function Game6() {
     const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');
     const gamesSection = document.querySelector('.games-section');
     if (gamesSection) {
         gamesSection.style.backgroundColor = randomColor;
     }
-    
-    alert(`Фон секции с играми изменён на цвет ${randomColor}`);
 }

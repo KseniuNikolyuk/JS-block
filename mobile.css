@@ -1,5 +1,5 @@
 @media (max-width: 768px) {
-  .boards {
+  .center {
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -54,7 +54,7 @@
     top: 0;
     right: 0;
   }
-  .about-games-section {
+  .about-games-box {
     display: none;
   }
   .mini-game-title {
@@ -98,7 +98,7 @@
   }
 }
 @media (min-width: 769px) and (max-width: 1023px) {
-  .about-games-section {
+  .about-games-box {
     display: none;
   }
   .mini-game-title {
@@ -141,15 +141,13 @@
     font-size: 24px;
   }
 }
-
 @media (min-width: 1024px) {
   .mini-games-mob {
     display: none;
   }
 }
-
 @media (max-width: 1328px) {
-  .games-block-1 {
+  .games-block-first {
     margin-bottom: 30px;
   }
-}
+}/*# sourceMappingURL=mobile.css.map */

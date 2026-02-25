@@ -7,7 +7,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.boards {
+.center {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -18,7 +18,7 @@ body {
     font-size: 16px;
 }
 
-.header-section {
+.header-box {
   position: relative; 
     height: 800px;
     background: rgba(225, 255, 143, 1);
@@ -72,7 +72,7 @@ body {
     z-index: 5;
 }
 
-.header__text {
+.header__description {
     color: rgba(32, 32, 39, 1);
     font-size: 24px;
     line-height: 32px;
@@ -110,7 +110,7 @@ body {
     transform: translateY(-2px);
 }
 
-.about-games-section {
+.about-games-box {
     background: rgba(32, 32, 39, 1);
     position: relative;
     overflow: hidden; 
@@ -128,7 +128,7 @@ body {
     z-index: 5;
 }
 
-.about-games__text {
+.about-games__description {
     color: rgba(255, 255, 255, 1);
     font-size: 24px;
     font-weight: 400;
@@ -140,22 +140,22 @@ body {
     z-index: 5;
 }
 
-.about-games-section__star {
+.about-games-box__star {
   position: absolute;
   z-index: 1; 
 }
 
-.about-games-section__star--1 {
+.about-games-box__star--1 {
   margin-top: 77px;
   right: 0;
 }
 
-.about-games-section__star--2 {
+.about-games-box__star--2 {
   margin-top: 770px;
   left: 28px;
 }
 
-.about-games-section__star--3 {
+.about-games-box__star--3 {
   margin-top: 822px;
   left: 45px;
 }
@@ -168,7 +168,7 @@ body {
     z-index: 5;
 }
 
-.games-block-1 {
+.games-block-first {
   margin-top: 72px;
   display: flex;
   flex-wrap: wrap;
@@ -178,7 +178,7 @@ body {
   z-index: 5;
 }
 
-.games-block-2 {
+.games-block-second {
   display: flex;
   flex-wrap: wrap;
   gap: 32px;
@@ -191,11 +191,11 @@ body {
   height: 512px;
 }
 
-.little-cards {
+.small-cards {
   height: 473px;
 }
 
-.games-cards {
+.game-cards {
   text-decoration: none;
 }
 
@@ -224,14 +224,14 @@ body {
   width: 100%;
 }
 
-.card-game__content {
+.card-game__description {
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin: 35px;
 }
 
-.card-game__num {
+.card-game__number {
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
