@@ -1,21 +1,39 @@
 // Мини-игра "Угадай число"
 function Game1() {
     const secretNumber = Math.floor(Math.random() * 100) + 1;
+    
     while(true) {
-        let guess = prompt("Введите число от 1 до 100:")
-        guess = Number(guess);
-
-        if (userChoice === null) {
+        let guess = prompt("Введите число от 1 до 100:");
+        
+        // Проверка на отмену (нажатие Cancel)
+        if (guess === null) {
             alert("Игра отменена. Возвращаюсь на главную!");
             return;
         }
+        
+        // Преобразуем в число
+        guess = Number(guess);
+        
+        // Проверка, что введено именно число
+        if (isNaN(guess)) {
+            alert("Пожалуйста, введите число!");
+            continue;
+        }
+        
+        // Проверка диапазона
+        if (guess < 1 || guess > 100) {
+            alert("Число должно быть от 1 до 100!");
+            continue;
+        }
+        
+        // Сравнение
         if (guess === secretNumber) {
-            alert("Поздравляю! Вы угадали число. Игра завершена")
-            break
+            alert("Поздравляю! Вы угадали число. Игра завершена!");
+            break;
         } else if (guess > secretNumber) {
-            alert ("Попробуй снова) Слишком много")
-        } else if (guess < secretNumber) {
-            alert ("Слишком большое! Попробуйте меньше.")
+            alert("Слишком много! Попробуйте меньше.");
+        } else {
+            alert("Слишком мало! Попробуйте больше.");
         }
     }
 }
@@ -160,7 +178,7 @@ function Game5() {
     const quiz = [
         {
             question: "Какого цвета небо?",
-            options: ["1. Красный", "2. Синий", "3. Зеленый"],
+            options: ["1. Синего", "2. Красного", "3. Желтого"],
             correctAnswer: 1
         },
         {
@@ -170,7 +188,7 @@ function Game5() {
         },
         {
             question: "Сколько у человека пальцев на одной руке?",
-            options: ["1. Четыре", "2. Пять", "3. Шесть"],
+            options: ["1. Четыре", "2. Шесть", "3. Пять"],
             correctAnswer: 3
         }
     ];
