@@ -13,6 +13,46 @@ html {
   padding: 0 20px;
 }
 
+.centeer {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.text {
+  background-color: #BCEC30;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 27px 0;
+  box-sizing: border-box;
+}
+.text__content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 51px;
+  animation: scroll 30s linear infinite;
+}
+.text__title {
+  color: rgb(32, 32, 39);
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 37px;
+  letter-spacing: 4%;
+  text-align: left;
+  text-transform: uppercase;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
@@ -375,7 +415,6 @@ body {
   line-height: 141.69%;
   text-align: center;
   transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
-  border: none;
   cursor: pointer;
 }
 .mini-games__button:hover,
@@ -412,7 +451,7 @@ body {
     line-height: 49px;
     letter-spacing: 0px;
   }
-  .header__text {
+  .header__description {
     font-size: 16px;
     text-align: center;
     font-weight: 400;
@@ -469,16 +508,6 @@ body {
   }
   .mini-games {
     display: none;
-    border-radius: 30px;
-    transition: none;
-  }
-  .mini-games__card {
-    background-color: white;
-    border-radius: 30px;
-    padding-bottom: 36px;
-  }
-  .mini-games__star {
-    display: none;
   }
   .mini-games-mob-1 {
     display: flex;
@@ -503,6 +532,10 @@ body {
   .about-games-box {
     display: none;
   }
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
   .mini-game-title {
     font-size: 64px;
     font-weight: 700;
@@ -513,14 +546,6 @@ body {
   }
   .mini-games {
     display: none;
-    border-radius: 30px;
-    transition: none;
-  }
-  .mini-games__card {
-    background-color: white;
-    width: 378px;
-    border-radius: 30px;
-    padding-bottom: 36px;
   }
   .mini-games-mob-1 {
     display: flex;
