@@ -13,6 +13,48 @@ html {
     padding: 0 20px;
 }
 
+.centeer {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+//анимированная полоска
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.text {
+    background-color: #BCEC30;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 27px 0;
+    box-sizing: border-box;
+    &__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 51px;
+        animation: scroll 30s linear infinite;
+    }
+    &__title {
+        color: rgba(32, 32, 39, 1);
+        font-family: Montserrat;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 37px;
+        letter-spacing: 4%;
+        text-align: left;
+        text-transform: uppercase;
+    }
+}
+
+
 body {
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
@@ -383,7 +425,6 @@ body {
   line-height: 141.69%;
   text-align: center;
   transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
-  border: none;
   cursor: pointer;
 
   &:hover {

@@ -10,7 +10,7 @@
     line-height: 49px;
     letter-spacing: 0px;
   }
-  .header__text {
+  .header__description {
     font-size: 16px;
     text-align: center;
     font-weight: 400;
@@ -67,16 +67,6 @@
   }
   .mini-games {
     display: none;
-    border-radius: 30px;
-    transition: none;
-  }
-  .mini-games__card {
-    background-color: white;
-    border-radius: 30px;
-    padding-bottom: 36px;
-  }
-  .mini-games__star {
-    display: none;
   }
   .mini-games-mob-1 {
     display: flex;
@@ -101,6 +91,10 @@
   .about-games-box {
     display: none;
   }
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
   .mini-game-title {
     font-size: 64px;
     font-weight: 700;
@@ -111,14 +105,6 @@
   }
   .mini-games {
     display: none;
-    border-radius: 30px;
-    transition: none;
-  }
-  .mini-games__card {
-    background-color: white;
-    width: 378px;
-    border-radius: 30px;
-    padding-bottom: 36px;
   }
   .mini-games-mob-1 {
     display: flex;
